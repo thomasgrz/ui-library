@@ -1,0 +1,4 @@
+node_modules
+dist
+# TODO: remove if i dont add this
+coverage 

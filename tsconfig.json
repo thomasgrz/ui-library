@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "jsx": "react",
+        "sourceMap":true,
+        "outDir": "dist",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop":true,
+        "strict": true,
+        "allowJs": true,
+        "baseUrl": "./src"
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+}
