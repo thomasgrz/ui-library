@@ -17,25 +17,25 @@ const Container = styled.div`
         height: 100%;
         background-color: yellow;
     }
-`
+`;
 const SlideWrapper = styled.div`
     text-align: center;
     border: 5px solid purple;
     max-width: 100%;
     margin: auto;
     height: 100%;
-    overflow: hidden; 
-`
-const CarouselUI = ({children}: any) => <Container>{children}</Container>
+    overflow: hidden;
+`;
+const CarouselUI = ({ children }: any) => <Container>{children}</Container>;
 const Carousel = makeCarousel(CarouselUI);
 
-function normalCorousel(){
-    return(
-        <Carousel swipe >
+function normalCorousel() {
+    return (
+        <Carousel swipe>
             <Slide right>
                 <SlideWrapper>
                     <h1>Slide 2</h1>
-                    <p>Details 2</p>                
+                    <p>Details 2</p>
                 </SlideWrapper>
             </Slide>
             <Slide right>
@@ -45,6 +45,6 @@ function normalCorousel(){
                 </SlideWrapper>
             </Slide>
         </Carousel>
-    )
+    );
 }
-export default normalCorousel
+export default normalCorousel;

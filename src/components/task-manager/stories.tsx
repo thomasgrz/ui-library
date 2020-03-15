@@ -1,14 +1,14 @@
-import TaskManager from '.'
+import TaskManager from '.';
 import React from 'react';
 // @ts-ignore
 import uuid from 'uniqid';
 
 export default {
     component: TaskManager,
-    title: "Task Manager"
-}
+    title: 'Task Manager',
+};
 
- const initialItems = {
+const initialItems = {
     forExistingTasks: [
         {
             task: 'procrastinate to the last minute',
@@ -29,7 +29,7 @@ export default {
             task: 'repeat',
             id: uuid(),
             completed: false,
-        }
+        },
     ],
     forSomeTasksCompleted: [
         {
@@ -56,7 +56,7 @@ export default {
             task: 'repeat',
             id: uuid(),
             completed: true,
-        }
+        },
     ],
     forAllTasksCompleted: [
         {
@@ -83,14 +83,18 @@ export default {
             task: 'repeat',
             id: uuid(),
             completed: true,
-        }
-    ]
-}
+        },
+    ],
+};
 
 export const withExistingTasks = (): JSX.Element => <TaskManager initialItems={initialItems.forExistingTasks} />;
 
-export const withNoTasks = (): JSX.Element => <TaskManager/>;
+export const withNoTasks = (): JSX.Element => <TaskManager />;
 
-export const withSomeTasksCompleted = (): JSX.Element => <TaskManager initialItems={initialItems.forSomeTasksCompleted}/>;
+export const withSomeTasksCompleted = (): JSX.Element => (
+    <TaskManager initialItems={initialItems.forSomeTasksCompleted} />
+);
 
-export const withAllTasksCompleted = (): JSX.Element => <TaskManager initialItems={initialItems.forAllTasksCompleted}/>
+export const withAllTasksCompleted = (): JSX.Element => (
+    <TaskManager initialItems={initialItems.forAllTasksCompleted} />
+);
